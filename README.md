@@ -7,15 +7,32 @@ broker_props = {
     "solace.messaging.authentication.scheme.basic.username": "solace-cloud-client",
     "solace.messaging.authentication.scheme.basic.password": "XD"
 }
-
 por tus datos propios de Solace. 
 
-Abre tres terminales independientes.
+Para el Proyecto se tendra que realizar lo siguiente:
 
-En la primera, ejecuta python carrier_dashboard.py.
+## Instrucciones de Instalación y Ejecución
 
-En la segunda, ejecuta python client_dashboard.py.
+1. **Crear el entorno virtual:**
+   ```bash
+   python -m venv venv
+Activar el entorno virtual:
 
-En la tercera, ejecuta python dispatcher.py.
+En Windows: .\venv\Scripts\activate
+
+En Mac/Linux: source venv/bin/activate
+
+Instalar dependencias:
+
+Bash
+pip install -r requirements.txt
+Ejecutar el proyecto:
+Para simular el sistema en tiempo real, abre 3 terminales distintas. Asegúrate de activar el entorno virtual en las tres y ejecuta los scripts en este orden:
+
+Terminal 1: python carrier_dashboard.py
+
+Terminal 2: python client_dashboard.py
+
+Terminal 3: python dispatcher.py (Este enviará el payload de prueba a las colas).
 
 Observa cómo al ejecutar el dispatcher, los mensajes se rutean instantáneamente a las consolas correspondientes dependiendo de las fechas que configures en el JSON de prueba.
